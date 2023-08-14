@@ -1,0 +1,17 @@
+*{
+  font-family: 'Roboto', sans-serif;
+  color: #010518;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 700px){
+#pcViewNavbar{
+  display: none;
+}
+#showcp{
+  display: flex;
+}
+#idForm{
+  padding-top: .5rem;
+}
+}
