@@ -2,19 +2,20 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
 const Searchbar = () => {
-  const [search, setSearch] = useState('');
-    const [data, setData] = useState([]);
+  const [search, setSearch] = useState('adobo');
+  const [data, setData] = useState([]);
 
  const fetchData = () => {
-    axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
+    axios.get(`https://www.themealdb.com/api/json/v2/1/search.php?s=${search}`)
       .then((response) => {
-        setData(response.data.meals)
+          setData(response.data.meals)
       })
   }
 
     const handleFormSubmit = (e) => {
     e.preventDefault();
       fetchData();
+      setSearch('')
   };
 
     useEffect(() => {
@@ -23,6 +24,7 @@ const Searchbar = () => {
   
    console.log(data)
   return (
+    <>
     <div className=" flex flex-col justify-center">
       <h1 className=' text-yellow-500 text-center flex justify-center pt-[4rem] p-9 text-6xl font-black'>
         Delightful Dishes, Effortlessly Discovered
@@ -42,9 +44,26 @@ const Searchbar = () => {
             </div>
         </form>
     </div>
-</div>
-        </div>
+      </div>
+      </div>
+        <div className='mt-10 px-9'>
+         { data ? data.map((item, key) => (
+           <>
+            <div key={key} className=' flex justify-center gap-2' id='searchcpView'>
+             <div className=' justify-center items-center flex'>
+              <img src={item.strMealThumb} className='w-2/6 rounded-md' alt="" />
+               </div>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident harum ex, amet veritatis possimus beatae omnis sed laboriosam illo repellat.
+             </div>
+           </>
+           
+      )) : <div>
+      <h1 className='text-6xl text-center'>Recipe Not Found</h1>
+        </div>}
+         </div>
+    </>
   )
 }
-
+//  <img src={item.strMealThumb} className='w-2/6 rounded-md' alt="" />
+    // <h1 className='text-1xl font-bold p-2'>Meal: {item.strMeal}</h1>
 export default Searchbar

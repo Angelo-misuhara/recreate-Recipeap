@@ -14,4 +14,13 @@
 #idForm{
   padding-top: 2px;
 }
+#searchcpView{
+  flex-direction: column;
+  padding: 1rem;
+  gap: 2rem;
+}
+#searchcpView img {
+  width: 40rem;
+  aspect-ratio: 1/1;
+}
 }
