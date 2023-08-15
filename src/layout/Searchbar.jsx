@@ -19,7 +19,8 @@ const Searchbar = () => {
   };
 
     useEffect(() => {
-    fetchData();
+      fetchData();
+      setSearch('')
     }, []);
   
    console.log(data)
