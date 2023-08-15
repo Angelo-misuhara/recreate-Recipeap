@@ -14,13 +14,21 @@
 #idForm{
   padding-top: 2px;
 }
-#searchcpView{
-  flex-direction: column;
-  padding: 1rem;
-  gap: 2rem;
+#tittlecp{
+  padding: 10px;
+  padding-right: 0;
+  text-align: center;
 }
-#searchcpView img {
-  width: 40rem;
-  aspect-ratio: 1/1;
+#cpviewSearch{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap:10px;
+}
+#cpviewSearchimg{
+  align-self: center;
+}
+#noFound{
+  font-size: 2rem;
 }
 }
