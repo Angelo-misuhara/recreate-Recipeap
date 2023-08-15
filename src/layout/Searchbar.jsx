@@ -6,22 +6,22 @@ const Searchbar = () => {
     const [data, setData] = useState([]);
 
  const fetchData = () => {
-    axios.get(`http://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
+    axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
       .then((response) => {
         setData(response.data.meals)
-      }).then(  console.log(data))
+      })
   }
 
     const handleFormSubmit = (e) => {
     e.preventDefault();
       fetchData();
-      setSearch('')
   };
 
     useEffect(() => {
     fetchData();
     }, []);
   
+   console.log(data)
   return (
     <div className=" flex flex-col justify-center">
       <h1 className=' text-yellow-500 text-center flex justify-center pt-[4rem] p-9 text-6xl font-black'>
