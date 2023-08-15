@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className="flex justify-between p-5" id="pcViewNavbar">
         <div className="flex flex-row gap-2">
           <img src="/img/icon32.png" alt="icon" className="hover:animate-spin" />
-          <h1 className="text-2xl font-black">Cooking Ina</h1>
+          <h1 className="text-2xl font-black">Cookingina</h1>
         </div>
         <div className="flex justify-center">
           <ul className="flex flex-row gap-5 justify-center items-center">
@@ -24,8 +24,8 @@ const Navbar = () => {
       </div>
       <div className=" hidden flex-row m-4 justify-between" id="showcp">
         <div className="flex flex-row gap-2">
-          <img src="/img/icon32.png" alt="icon" className="hover:animate-spin" />
-          <h1 className="text-2xl font-black">Cooking Ina</h1>
+          <img src="/img/icon64.png" alt="icon" className="w-1/6 hover:animate-spin" />
+          <h1 className="text-2xl font-black">Cookingina</h1>
         </div>
         <div>
           <img src={isShow ? '/img/close32.png' : '/img/menu32.png'} alt="icon" onClick={()=> setShow(!isShow)} />
