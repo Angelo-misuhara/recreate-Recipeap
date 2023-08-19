@@ -1,34 +1,47 @@
-*{
-  font-family: 'Roboto', sans-serif;
-  color: #010518;
+* {
+  font-family: "Roboto", sans-serif;
+  color: #120c13;
   box-sizing: border-box;
 }
+body {
+  background-color: #fdfcfd;
+}
 
-@media screen and (max-width: 700px){
-#pcViewNavbar{
-  display: none;
-}
-#showcp{
-  display: flex;
-}
-#idForm{
-  padding-top: 2px;
-}
-#tittlecp{
-  padding: 10px;
-  padding-right: 0;
-  text-align: center;
-}
-#cpviewSearch{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap:10px;
-}
-#cpviewSearchimg{
-  align-self: center;
-}
-#noFound{
-  font-size: 2rem;
-}
+@media screen and (max-width: 700px) {
+  #pcViewNavbar {
+    display: none;
+  }
+  #showcp {
+    display: flex;
+  }
+  #idForm {
+    padding-top: 2px;
+  }
+  #tittlecp {
+    padding: 10px;
+    padding-right: 0;
+    text-align: center;
+  }
+  #noFound {
+    font-size: 2rem;
+  }
+  #container-Result {
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #container-Result img {
+    width: 15rem;
+  }
+  .pic {
+    justify-content: center;
+    display: flex;
+  }
+  #aboutResult {
+    align-items: center;
+  }
+  #cookinginaphone {
+    align-items: center;
+    align-self: center;
+  }
 }
