@@ -5,16 +5,18 @@ import AppRoutes from './Routes'
 import { BrowserRouter } from 'react-router-dom'
 import Searchbar from './layout/Searchbar'
 import 'flowbite';
+import { Footer } from './layout/Footer'
 
 function App() {
 
 
   return (
     <>
-      <Navbar />
-      <Searchbar/>
       <BrowserRouter>
-        <AppRoutes/>
+        <Navbar />
+      <Searchbar/>
+        <AppRoutes />
+        <Footer/>
       </BrowserRouter>
     </>
   )

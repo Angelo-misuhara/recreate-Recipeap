@@ -1,13 +1,16 @@
 import { useState } from "react"
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
 
   const li = ['Main', 'Japanese', 'Protein', 'Soup']
+
   const [isShow,setShow] = useState(false)
 
   return (
     <>
+       {/* className="font-bold cursor-pointer hover:text-[#65955f]" */}
       {/* Pc-view */}
       <div className="flex justify-between p-5" id="pcViewNavbar">
         <div className="flex flex-row gap-2">
@@ -15,11 +18,7 @@ const Navbar = () => {
           <h1 className="text-2xl font-black">Cookingina</h1>
         </div>
         <div className="flex justify-center">
-          <ul className="flex flex-row gap-5 justify-center items-center">
-            {li.map((item, key) => (
-              <li key={key} className="font-bold cursor-pointer hover:text-[#65955f]">{item}</li>
-            ))}
-          </ul>
+          <Link></Link>
         </div>
       </div>
       <div className=" hidden flex-row m-4 justify-between" id="showcp">
@@ -35,7 +34,7 @@ const Navbar = () => {
         <ul className="flex flex-col gap-4">
           {li.map((item, key) => (
             <li key={key} className="font-bold cursor-pointer hover:text-[#f0c60a]">{item}</li>
-         ))}
+      ))}
       </ul>
       </div>}
     </>
